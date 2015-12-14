@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NoteWrangler">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Note Wrangler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div class="nav-wrapper has-dropdown">
+      <div class="nav-content">
+        <div class="wrapper">
+          <div class="nav-content-layout">
+            <div class="nav-list">
+
+              <a href="#/"
+              class="list-item"
+              ng-click="selected = 'notes'"
+              ng-class="{'active': selected == 'notes'}"> Notes </a>
+
+              <a href="#/users"
+              class="list-item"
+              ng-click="selected = 'users'"
+              ng-class="{'active': selected == 'users'}"> Users </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-wrapper">
+      <div class="hero-content">
+        <div class="hero"></div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <div ng-view></div>
+    </div>
+
+    <!-- Load Js libs -->
+    <!-- <script src="javascript/vendor/jquery.js"></script> -->
+    <script src="angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-route.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="config/routes.js" type="text/javascript">
+
+    </script>
+
+    <!-- Controllers -->
+    <script src="javascript/controllers/notes-create-controller.js"></script>
+    <script src="javascript/controllers/notes-edit-controller.js"></script>
+    <script src="javascript/controllers/notes-index-controller.js"></script>
+    <script src="javascript/controllers/notes-show-controller.js"></script>
+
+
+
+  </body>
+</html>
